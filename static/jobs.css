@@ -1,0 +1,331 @@
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.background-main {
+    background-image: linear-gradient(to right, rgb(255, 245, 241), rgb(255, 245, 248));
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar-container {
+    display: flex; 
+    position: sticky; 
+    top: 0; 
+    z-index: 50; 
+    padding: 1.25rem; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    transition: all 0.5s;
+}
+
+.navbar-container > div > img {
+    height: 75px;
+    width: 50%;
+    object-fit: contain;
+}
+
+.header-links {
+    display: flex; 
+    margin-left: 1.25rem; 
+    align-items: flex-end;
+}
+
+.header-link {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.header-link:hover {
+    border: 2px solid #0000;
+}
+
+.header-link > a {
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+    font-weight: 700;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-right {
+    display: flex; 
+    margin-left: 1.25rem; 
+    align-items: flex-end; 
+}
+
+.search-bar {
+    display: flex; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition-duration: 200ms; 
+    align-items: center;
+    border-radius: 9999px;
+    background-color: white;
+    margin-left: 20px;
+    border: 1px solid #C2C2C2;
+}
+
+.search-bar:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+}
+
+.search-container {
+    display: flex; 
+    margin-left: 0.5rem; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.search-container > p {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.search-container > input {
+    background-color: transparent; 
+    color: #4B5563; 
+    font-size: 0.875rem;
+    color: #9CA3AF; 
+    outline: none;
+    border: none;
+}
+
+.divider {
+    height: 2rem;
+    border: 1px solid #C2C2C2;
+}
+
+.sc-l {
+    margin-left: 10px;
+}
+
+.search-icon {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: #C2C2C2;
+    border-radius: 9999px;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    height: 100vh;
+    width: 100vw;
+}
+
+#heading {
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    font-weight: 600; 
+    color: #0081FB;
+    letter-spacing: 0.5em;
+}
+
+.jobs-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobs-container {
+    flex: 1 1 0%;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.job {
+    background-color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #C2C2C2;
+    transition-duration: 200ms; 
+}
+
+.job:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+}
+
+.logo-big {
+    font-size: 4rem;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+}
+
+#fb {
+    color: #0081FB;
+}
+
+#wa {
+    color: #25D366;
+}
+
+#mg {
+    background: -webkit-linear-gradient(#0695FF, #A334FA, #FF6968);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#ig {
+    background: -webkit-linear-gradient(#FFDC80, #FCAF45, #F77737, #F56040, #FD1D1D, #E1306C, #C13584, #833AB4, #5B51D8, #405DE6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.job-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.top-left {
+    display: flex;
+}
+
+#title {
+    margin-left: 1.25rem; 
+    margin-right: 0.5rem; 
+    color: #374151; 
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    font-weight: 700; 
+}
+
+#type {
+    margin-left: 0.5rem; 
+    color: #374151; 
+    font-size: 1.5rem;
+    line-height: 2rem; 
+}
+
+#desc {
+    color: #6B7280;
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+#salary {
+    color: #374151; 
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.job-bottom {
+    flex: 1 1 0%;
+}
+
+#location {
+    text-align: right;
+    color: #374151; 
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+}
+
+.topjob-container {
+    margin-left: 5rem;
+    margin-top: 5rem;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 20rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #C2C2C2;
+    transition-duration: 200ms; 
+}
+
+.topjob-container:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.topjob-top {
+    flex: 1 1 0%;
+}
+
+.topjob-top-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-2 {
+    margin-left: 1.25rem; 
+    margin-right: 0.5rem; 
+    color: #374151; 
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    font-weight: 700; 
+    text-align: center;
+}
+
+.topjob-top-2 {
+    margin-top: 2rem;
+}
+
+#topjob-heading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #0081FB;
+    letter-spacing: 0.5em;   
+    margin-bottom: 2rem;
+}
+
+.topjob-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#tj-l {
+    text-align: right;
+    color: #374151; 
+    font-size: 1rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+}
+
+#tj-t {
+    margin-left: 0.5rem; 
+    color: #374151; 
+    font-size: 1rem;
+    line-height: 2rem; 
+}
+
+#tj-s {
+    color: #374151; 
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 700; 
+}

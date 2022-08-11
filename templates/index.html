@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <title>Meta Redesign by Abr</title>
+</head>
+<body>
+    <div class="background-main">
+        <div class="navbar-container" id="navbar">
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1280px-Meta_Platforms_Inc._logo.svg.png" />
+            </div>
+            <div class="navbar-right">
+                <div class="header-links">
+                    <div class="header-link">
+                        <a href="/jobs">Jobs</a>
+                    </div>
+                    <div class="header-link">
+                        <a href="/about">About Us</a>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <div class="search-container">
+                        <p>Find Open Jobs</p>
+                        <input
+                            type="text"
+                            placeholder="Search by job title"
+                            class="search-input" />
+                    </div>
+                    <div class="divider"></div>
+                    <div class="search-container sc-l">
+                        <p>Search by Location</p>
+                        <input
+                            type="text"
+                            placeholder="Office, data center, etc."
+                            class="search-input" />
+                    </div>
+                    <div class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div>
+                <div class="banner-text-container">
+                    <p id="heading">META CAREERS</p>
+                    <p id="para">Your work <br />— now <br /> remote.</p>
+                </div>
+                <div class="banner-image-container">
+                    <img
+                        src="/static/img/banner.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-next">
+        <div>
+            <div class="testimonials-textbox">
+                <p id="heading">BUILD A SECURE FUTURE</p>
+                <p id="para">Innovators, changemakers and thought leaders—you'll find them all at Meta.</p>
+            </div>
+            <div class="testimonials-imgbox">
+                {% for ttm in testimonials %}
+                    <div class="testimonial">
+                        <div id="img">
+                            <img src="{{ttm['img']}}" />
+                        </div>
+                        <div id="text">
+                            <p id="name">{{ ttm['name'] }}</p>
+                            <p id="job">{{ ttm['job'] }}</p>
+                            <p id="quote">"{{ ttm['quote'] }}"</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div style="margin-top: 5rem;">
+            <div class="showcase-textbox">
+                <p id="heading">WHAT WE BUILD</p>
+                <p id="para">From social media to cutting-edge AR/VR, all our technologies share a vision of a more connected world.</p>
+            </div>
+            <div class="showcase" id="showcase">
+                <div class="showcase-cnt">
+                    <div class="item-container item-fb" id="item-fb">
+                        <i class="fa-brands fa-facebook logo"id="fb"></i>
+                        <p id="name">Facebook</p>
+                    </div>
+                    <div class="item-container item-ig">
+                        <i class="fa-brands fa-instagram logo" id="ig"></i>
+                        <p id="name">Instagram</p>
+                    </div>
+                </div>
+                <div class="showcase-cnt">
+                    <div class="item-container item-wa">
+                        <i class="fa-brands fa-whatsapp logo"id="wa"></i>
+                        <p id="name">Whatsapp</p>
+                    </div>
+                    <div class="item-container item-mg">
+                        <i class="fa-brands fa-facebook-messenger logo" id="mg"></i>
+                        <p id="name">Messenger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
