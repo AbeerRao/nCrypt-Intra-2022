@@ -1,17 +1,16 @@
 body {
     overflow-x: hidden;
     overflow-y: hidden;
+    background-image: linear-gradient(to right, rgb(255, 245, 241), rgb(255, 245, 248));
 }
 
 .background-main {
-    background-image: linear-gradient(to right, rgb(255, 245, 241), rgb(255, 245, 248));
     height: 100vh;
     width: 100vw;
 }
 
 .navbar-container {
-    display: flex; 
-    position: sticky; 
+    display: flex;
     top: 0; 
     z-index: 50; 
     padding: 1.25rem; 
@@ -324,8 +323,57 @@ a, a:hover, a:focus, a:active {
 }
 
 #tj-s {
-    color: #374151; 
+    color: #0081FB; 
     font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: 700; 
+}
+
+@media screen and (max-width: 1500px) {
+    body {
+        overflow-y: scroll;
+    }
+    .jobs-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #title {
+        font-size: 1.25rem;
+    }
+    #type {
+        font-size: 1rem;
+    }
+    #desc {
+        font-size: 1rem;
+    }
+    .topjob-container {
+        margin-top: 2rem;
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+    .topjob-top-2 #desc {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #title-2 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    #tj-l {
+        font-size: 1.5rem;
+    }
+    #tj-t {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+    #tj-s {
+        font-size: 1.625rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }

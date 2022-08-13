@@ -154,10 +154,7 @@ a, a:hover, a:focus, a:active {
     font-size: 8rem;
     line-height: 1; 
     font-weight: 700; 
-    letter-spacing: 0.05em; 
-    @media (min-width: 768px) {
-        font-size: 8rem;
-    }
+    letter-spacing: 0.05em;
 }
 
 .banner-image-container > img {
@@ -380,4 +377,19 @@ a, a:hover, a:focus, a:active {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1500px) {
+    .banner-text-container #para {
+        font-size: 5rem;
+    }
+    .banner-text-container {
+        padding-left: 8rem;
+    }
+    .testimonials-imgbox {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
 }
